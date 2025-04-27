@@ -1,7 +1,7 @@
 # Portfolio
 This is my personal portfolio showcasing my skills as a Full Stack Developer. It includes sections like an introduction, about me, technical skills, professional skills, portfolio projects, and contact information.
 ## Live Demo
-[View Portfolio](https://your-live-portfolio-link.com)
+[View Portfolio](https://shivareddy2.github.io/Portfolio/)
 ## Technologies Used:
 - HTML5
 - CSS3
