@@ -1,4 +1,4 @@
-// Typed.js animation
+// Typed.js effect
 var typed = new Typed(".text", {
     strings: ["Frontend Developer", "Java Developer", "Web Developer", "Python Developer"],
     typeSpeed: 100,
@@ -7,7 +7,7 @@ var typed = new Typed(".text", {
     loop: true
 });
 
-// Skills Animation on Scroll
+// Animate skill bars on scroll
 function animateSkills() {
     const skills = document.querySelectorAll(".skill-bar");
     skills.forEach(skill => {
