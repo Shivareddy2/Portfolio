@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Portfolio</title>
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -100,7 +101,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: rgba(0, 0, 0, 0.7);
             color: #fff;
             display: flex;
             flex-direction: column;
@@ -109,6 +110,8 @@
             opacity: 0;
             visibility: hidden;
             transition: all 0.5s ease;
+            text-align: center;
+            padding: 20px;
         }
 
         .portfolio-item:hover .layer {
@@ -155,14 +158,14 @@
             margin: 20px 0;
         }
 
-        .bars .bar {
+        .bar {
             display: flex;
             align-items: center;
             margin: 10px 0;
         }
 
         .bar .label {
-            width: 100px;
+            width: 150px;
         }
 
         .bar .progress {
@@ -189,8 +192,26 @@
                 width: 100%;
             }
         }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        form button {
+            background-color: #ff5722;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
+
 <body>
 
     <header class="header">
@@ -215,49 +236,58 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>I'm Aleti Shivasai, a Computer Science graduate with a passion for Full Stack Development. I am a quick learner and a team player, ready to contribute to exciting projects.</p>
+        <p>I'm Aleti Shivasai, a Computer Science graduate passionate about Full Stack Development. A quick learner and a team player, ready to contribute to exciting projects.</p>
     </section>
+
+    <section id="about">
+    <h2>About Me</h2>
+    <p>I'm Aleti Shivasai, a Computer Science graduate and trained Java Full Stack Developer from JSPiders. Passionate about Full Stack Development, I am a quick learner and a team player, eager to contribute to exciting projects and grow further in my career.</p>
+    </section>
+
 
     <section id="skills">
         <h2>My Skills</h2>
         <div class="skills-section">
-            <h3>Technical Skills</h3>
             <div class="bars">
+                <div class="bar">
+                    <div class="label">React JS</div>
+                    <div class="progress"><span style="width: 85%;"></span></div>
+                </div>
+                <div class="bar">
+                    <div class="label">Core Java</div>
+                    <div class="progress"><span style="width: 80%;"></span></div>
+                </div>
+                <div class="bar">
+                    <div class="label">Spring Boot</div>
+                    <div class="progress"><span style="width: 75%;"></span></div>
+                </div>
+                <div class="bar">
+                    <div class="label">Hibernate</div>
+                    <div class="progress"><span style="width: 70%;"></span></div>
+                </div>
+                <div class="bar">
+                    <div class="label">JDBC</div>
+                    <div class="progress"><span style="width: 75%;"></span></div>
+                </div>
+                <div class="bar">
+                    <div class="label">JavaScript</div>
+                    <div class="progress"><span style="width: 80%;"></span></div>
+                </div>
+                <div class="bar">
+                    <div class="label">SQL</div>
+                    <div class="progress"><span style="width: 80%;"></span></div>
+                </div>
                 <div class="bar">
                     <div class="label">HTML</div>
                     <div class="progress"><span style="width: 90%;"></span></div>
                 </div>
                 <div class="bar">
                     <div class="label">CSS</div>
-                    <div class="progress"><span style="width: 80%;"></span></div>
-                </div>
-                <div class="bar">
-                    <div class="label">JavaScript</div>
-                    <div class="progress"><span style="width: 75%;"></span></div>
-                </div>
-                <div class="bar">
-                    <div class="label">Java</div>
-                    <div class="progress"><span style="width: 80%;"></span></div>
-                </div>
-                <div class="bar">
-                    <div class="label">React</div>
-                    <div class="progress"><span style="width: 85%;"></span></div>
-                </div>
-            </div>
-
-            <h3>Professional Skills</h3>
-            <div class="bars">
-                <div class="bar">
-                    <div class="label">Teamwork</div>
                     <div class="progress"><span style="width: 85%;"></span></div>
                 </div>
                 <div class="bar">
-                    <div class="label">Creativity</div>
-                    <div class="progress"><span style="width: 90%;"></span></div>
-                </div>
-                <div class="bar">
-                    <div class="label">Problem Solving</div>
-                    <div class="progress"><span style="width: 80%;"></span></div>
+                    <div class="label">C#</div>
+                    <div class="progress"><span style="width: 65%;"></span></div>
                 </div>
             </div>
         </div>
@@ -267,63 +297,4 @@
         <h2>Latest Projects</h2>
         <div class="container">
             <div class="portfolio-item">
-                <img src="https://up.yimg.com/ib/th?id=OIP.zwOvfM5vxp-NyjC7XPUBnQHaFR&pid=Api&rs=1&c=1&qlt=95&w=149&h=105" alt="Weather App">
-                <div class="layer">
-                    <h5>Weather App</h5>
-                    <p>Provides real-time weather details for any location.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://tse3.mm.bing.net/th?id=OIP.-9YlpoXlsEx6xIdIVZh-CgHaEK&pid=Api&P=0&h=180" alt="To-Do List">
-                <div class="layer">
-                    <h5>To-Do List</h5>
-                    <p>Helps users organize and prioritize tasks effectively.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://tse1.mm.bing.net/th?id=OIP.EaW8aDFUX4ghfrxPcsJpZAHaFj&pid=Api&P=0&h=180" alt="Quiz App">
-                <div class="layer">
-                    <h5>Quiz App</h5>
-                    <p>Provides an engaging platform for interactive quizzes.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="https://formspree.io/f/mvgblbln" method="POST" style="max-width: 600px; margin: auto;">
-            <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 12px; margin: 10px 0; border-radius: 5px; border: 1px solid #ddd;">
-            <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 12px; margin: 10px 0; border-radius: 5px; border: 1px solid #ddd;">
-            <textarea name="message" rows="5" placeholder="Your Message" required style="width: 100%; padding: 12px; margin: 10px 0; border-radius: 5px; border: 1px solid #ddd;"></textarea>
-            <button type="submit" style="background-color: #ff5722; color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer;">Send Message</button>
-        </form>
-    </section>
-
-    <footer>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <p>&copy; 2025 Aleti Shivasai | All Rights Reserved.</p>
-    </footer>
-
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        var options = {
-            strings: ["Full Stack Developer", "JavaScript Enthusiast", "React Developer", "Java Developer"],
-            typeSpeed: 50,
-            backSpeed: 30,
-            backDelay: 1000,
-            loop: true
-        };
-        var typed = new Typed(".text", options);
-    </script>
-</body>
-</html>
+                <img src="https://up.yimg.com/ib/th?id=OIP.zwOvfM5vxp-NyjC7XPUBnQHaFR&pid=Api&rs
