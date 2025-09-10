@@ -1,23 +1,17 @@
-// Typed.js effect
-var typed = new Typed(".text", {
-    strings: ["Frontend Developer", "Java Developer", "Web Developer", "Python Developer"],
+document.addEventListener('DOMContentLoaded', () => {
+  // Initialize Typed.js for the "I'm a" text animation
+  new Typed('.text', {
+    strings: ['Full Stack Developer', 'Web Developer', 'Software Engineer'],
     typeSpeed: 100,
     backSpeed: 50,
-    backDelay: 1500,
+    backDelay: 1000,
     loop: true
+  });
+
+  // Animate skill bars based on data-percent attribute
+  const skillBars = document.querySelectorAll('.skill-bar');
+  skillBars.forEach(bar => {
+    const percent = bar.getAttribute('data-percent');
+    bar.querySelector('span').style.width = `${percent}%`;
+  });
 });
-
-// Animate skill bars on scroll
-function animateSkills() {
-    const skills = document.querySelectorAll(".skill-bar");
-    skills.forEach(skill => {
-        const rect = skill.getBoundingClientRect();
-        if(rect.top < window.innerHeight - 50) {
-            const span = skill.querySelector("span");
-            span.style.width = skill.getAttribute("data-percent") + "%";
-        }
-    });
-}
-
-window.addEventListener("scroll", animateSkills);
-window.addEventListener("load", animateSkills);
