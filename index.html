@@ -1,300 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Portfolio</title>
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Portfolio</title>
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+<style>
+body { font-family: Arial, sans-serif; margin:0; padding:0; box-sizing:border-box; }
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: #333;
-            color: #fff;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+/* Header */
+header { display:flex; justify-content:space-between; align-items:center; padding:20px; background-color:#333; color:#fff; position:sticky; top:0; z-index:1000; }
+header .logo { font-size:1.5rem; font-weight:bold; }
+.navbar a { color:#fff; text-decoration:none; margin:0 15px; transition: color 0.3s; }
+.navbar a:hover { color:#ff5722; }
 
-        header .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
+/* Home Section */
+.home { display:flex; flex-direction:column; justify-content:center; align-items:center; padding:100px 20px; background:linear-gradient(120deg,#ff5722,#f68084); color:white; text-align:center; }
+.home h1 { font-size:2.5rem; margin:10px 0; }
+.home img { border-radius:50%; width:200px; height:auto; margin:15px 0; }
+.btn-box { background-color:#fff; color:#333; padding:10px 20px; border-radius:5px; text-decoration:none; transition:all 0.3s; }
+.btn-box:hover { background-color:#333; color:#fff; }
 
-        .navbar a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            transition: color 0.3s;
-        }
+/* Sections */
+section { padding:50px 20px; }
+section h2 { text-align:center; font-size:2.5rem; margin-bottom:40px; }
 
-        .navbar a:hover {
-            color: #ff5722;
-        }
+/* Skills Section */
+.skills-container { display:flex; flex-wrap:wrap; gap:15px; justify-content:center; }
+.skill-badge { padding:10px 20px; border-radius:25px; color:#fff; font-weight:500; transition:transform 0.3s, box-shadow 0.3s; cursor:default; white-space:nowrap; }
+.skill-badge:nth-child(1) { background: linear-gradient(135deg,#ff5722,#ff9800);}
+.skill-badge:nth-child(2) { background: linear-gradient(135deg,#4CAF50,#81C784);}
+.skill-badge:nth-child(3) { background: linear-gradient(135deg,#1976d2,#42A5F5);}
+.skill-badge:nth-child(4) { background: linear-gradient(135deg,#9C27B0,#BA68C8);}
+.skill-badge:nth-child(5) { background: linear-gradient(135deg,#607D8B,#90A4AE);}
+.skill-badge:nth-child(6) { background: linear-gradient(135deg,#FF9800,#FFC107);}
+.skill-badge:nth-child(7) { background: linear-gradient(135deg,#03A9F4,#29B6F6);}
+.skill-badge:nth-child(8) { background: linear-gradient(135deg,#E91E63,#F06292);}
+.skill-badge:nth-child(9) { background: linear-gradient(135deg,#00BCD4,#26C6DA);}
+.skill-badge:nth-child(10) { background: linear-gradient(135deg,#795548,#A1887F);}
+.skill-badge:hover { transform:translateY(-5px); box-shadow:0 6px 15px rgba(0,0,0,0.2); }
 
-        .home {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 100px 20px;
-            background: linear-gradient(120deg, #ff5722, #f68084);
-            color: white;
-            text-align: center;
-        }
+/* Portfolio Section */
+.container { display:flex; flex-wrap:wrap; gap:30px; justify-content:center; }
+.portfolio-item { background:#fff; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.1); max-width:300px; padding:20px; transition: transform 0.3s, box-shadow 0.3s; position:relative; }
+.portfolio-item img { width:100%; border-radius:10px; margin-bottom:15px; }
+.portfolio-item h4 { margin-bottom:10px; }
+.portfolio-item p { margin-bottom:15px; color:#555; }
+.portfolio-item a { display:inline-block; padding:8px 16px; background-color:#ff5722; color:#fff; border-radius:6px; text-decoration:none; font-weight:500; transition:background 0.3s; }
+.portfolio-item a:hover { background-color:#e64a19; }
+.portfolio-item:hover { transform:translateY(-5px); box-shadow:0 8px 25px rgba(0,0,0,0.15); }
 
-        .home h1 {
-            font-size: 2.5rem;
-        }
+/* Footer */
+footer { background:#333; color:#fff; padding:20px; text-align:center; }
+footer ul { display:flex; justify-content:center; list-style:none; padding:0; }
+footer ul li { margin:0 10px; }
+footer ul li a { color:#fff; text-decoration:none; transition:color 0.3s; }
+footer ul li a:hover { color:#ff5722; }
 
-        .btn-box {
-            background-color: #fff;
-            color: #333;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        .btn-box:hover {
-            background-color: #333;
-            color: #fff;
-        }
-
-        section {
-            padding: 50px 20px;
-        }
-
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            justify-content: space-around;
-        }
-
-        .portfolio-item {
-            position: relative;
-            width: 300px;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-
-        .portfolio-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .portfolio-item .layer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.5s ease;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .portfolio-item:hover .layer {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        footer {
-            background: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 0;
-        }
-
-        footer ul li {
-            margin: 0 10px;
-        }
-
-        footer ul li a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        footer ul li a:hover {
-            color: #ff5722;
-        }
-
-        .skills-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .skills-section .bars {
-            width: 80%;
-            margin: 20px 0;
-        }
-
-        .bar {
-            display: flex;
-            align-items: center;
-            margin: 10px 0;
-        }
-
-        .bar .label {
-            width: 150px;
-        }
-
-        .bar .progress {
-            width: 70%;
-            background-color: #ddd;
-            height: 20px;
-            position: relative;
-            border-radius: 10px;
-        }
-
-        .bar .progress span {
-            display: block;
-            height: 100%;
-            background-color: #ff5722;
-            border-radius: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-            }
-
-            .portfolio-item img {
-                width: 100%;
-            }
-        }
-
-        form input, form textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-
-        form button {
-            background-color: #ff5722;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
+/* Responsive */
+@media (max-width:768px){ .navbar{ flex-direction:column;} }
+</style>
 </head>
 
 <body>
 
-    <header class="header">
-        <a href="#" class="logo">Portfolio</a>
-        <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<header class="header">
+<a href="#" class="logo">Portfolio</a>
+<nav class="navbar">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
 
-    <section class="home" id="home">
-        <h3>Hello, It's Me</h3>
-        <img src="https://media.licdn.com/dms/image/v2/D5603AQHvuLXwmZwmuQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1731850159723?e=1751500800&v=beta&t=tw4_RzGfvSwXp0sOQ2zEadYisR5QVIwefvSQ6iTUCWs" alt="About Me" style="width:300px;height:auto;">
-        <h1>Aleti Shivasai</h1>
-        <h3>And I'm a <span class="text"></span></h3>
-        <p>I'm a Full Stack Developer. My internship experience has strengthened my personal skills, and I am eager to learn and grow further in my career.</p>
-        <a href="#about" class="btn-box">More About Me</a>
-    </section>
+<section class="home" id="home">
+<h3>Hello, It's Me</h3>
+<img src="https://media.licdn.com/dms/image/v2/D5603AQHvuLXwmZwmuQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1731850159723?e=1751500800&v=beta&t=tw4_RzGfvSwXp0sOQ2zEadYisR5QVIwefvSQ6iTUCWs" alt="About Me">
+<h1>Aleti Shivasai</h1>
+<h3>And I'm a Full Stack Developer</h3>
+<p>I'm a Full Stack Developer. My internship experience has strengthened my personal skills, and I am eager to learn and grow further in my career.</p>
+<a href="#about" class="btn-box">More About Me</a>
+</section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm Aleti Shivasai, a Computer Science graduate passionate about Full Stack Development. A quick learner and a team player, ready to contribute to exciting projects.</p>
-    </section>
+<section id="about">
+<h2>About Me</h2>
+<p>I'm Aleti Shivasai, a Computer Science graduate passionate about Full Stack Development. A quick learner and a team player, ready to contribute to exciting projects.</p>
+</section>
 
-    <section id="about">
-    <h2>About Me</h2>
-    <p>I'm Aleti Shivasai, a Computer Science graduate and trained Java Full Stack Developer from JSPiders. Passionate about Full Stack Development, I am a quick learner and a team player, eager to contribute to exciting projects and grow further in my career.</p>
-    </section>
+<section id="skills">
+<h2>My Skills</h2>
+<div class="skills-container">
+<div class="skill-badge">React JS</div>
+<div class="skill-badge">Core Java</div>
+<div class="skill-badge">Spring Boot</div>
+<div class="skill-badge">Hibernate</div>
+<div class="skill-badge">JDBC</div>
+<div class="skill-badge">JavaScript</div>
+<div class="skill-badge">SQL</div>
+<div class="skill-badge">HTML</div>
+<div class="skill-badge">CSS</div>
+<div class="skill-badge">C#</div>
+</div>
+</section>
 
+<section id="portfolio">
+<h2>Latest Projects</h2>
+<div class="container">
+<div class="portfolio-item">
+<img src="https://up.yimg.com/ib/th?id=OIP.zwOvfM5vxp-NyjC7XPUBnQHaFR&pid=Api&rs=1&c=1&qlt=95&w=149&h=105" alt="Weather App">
+<h4>Weather App</h4>
+<p>Provides real-time weather updates based on location using external APIs.</p>
+<a href="https://github.com/shivareddy2/weather-app" target="_blank">View Project</a>
+</div>
 
-    <section id="skills">
-        <h2>My Skills</h2>
-        <div class="skills-section">
-            <div class="bars">
-                <div class="bar">
-                    <div class="label">React JS</div>
-                    <div class="progress"><span style="width: 85%;"></span></div>
-                </div>
-                <div class="bar">
-                    <div class="label">Core Java</div>
-                    <div class="progress"><span style="width: 80%;"></span></div>
-                </div>
-                <div class="bar">
-                    <div class="label">Spring Boot</div>
-                    <div class="progress"><span style="width: 75%;"></span></div>
-                </div>
-                <div class="bar">
-                    <div class="label">Hibernate</div>
-                    <div class="progress"><span style="width: 70%;"></span></div>
-                </div>
-                <div class="bar">
-                    <div class="label">JDBC</div>
-                    <div class="progress"><span style="width: 75%;"></span></div>
-                </div>
-                <div class="bar">
-                    <div class="label">JavaScript</div>
-                    <div class="progress"><span style="width: 80%;"></span></div>
-                </div>
-                <div class="bar">
-                    <div class="label">SQL</div>
-                    <div class="progress"><span style="width: 80%;"></span></div>
-                </div>
-                <div class="bar">
-                    <div class="label">HTML</div>
-                    <div class="progress"><span style="width: 90%;"></span></div>
-                </div>
-                <div class="bar">
-                    <div class="label">CSS</div>
-                    <div class="progress"><span style="width: 85%;"></span></div>
-                </div>
-                <div class="bar">
-                    <div class="label">C#</div>
-                    <div class="progress"><span style="width: 65%;"></span></div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="portfolio-item">
+<img src="https://tse3.mm.bing.net/th?id=OIP.-9YlpoXlsEx6xIdIVZh-CgHaEK&pid=Api&P=0&h=180" alt="To-Do List App">
+<h4>To-Do List App</h4>
+<p>Helps manage tasks and set priorities with a simple interactive interface.</p>
+<a href="https://github.com/shivareddy2/todo-list-app" target="_blank">View Project</a>
+</div>
 
-    <section id="portfolio">
-        <h2>Latest Projects</h2>
-        <div class="container">
-            <div class="portfolio-item">
-                <img src="https://up.yimg.com/ib/th?id=OIP.zwOvfM5vxp-NyjC7XPUBnQHaFR&pid=Api&rs
+<div class="portfolio-item">
+<img src="https://tse1.mm.bing.net/th?id=OIP.EaW8aDFUX4ghfrxPcsJpZAHaFj&pid=Api&P=0&h=180" alt="Quiz App">
+<h4>Quiz App</h4>
+<p>Interactive platform providing quizzes for knowledge checks across multiple topics.</p>
+<a href="https://github.com/shivareddy2/quiz-app" target="_blank">View Project</a>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact Me</h2>
+<form action="mailto:shivasaireddyaleti@gmail.com" method="post" enctype="text/plain">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+</section>
+
+<footer>
+<p>&copy; 2025 Aleti Shivasai</p>
+<ul>
+<li><a href="https://github.com/shivareddy2" target="_blank"><i class='bx bxl-github'></i></a></li>
+<li><a href="https://www.linkedin.com/in/shivareddyaleti/" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+<li><a href="mailto:shivasaireddyaleti@gmail.com"><i class='bx bxl-gmail'></i></a></li>
+</ul>
+</footer>
+</body>
+</html>
