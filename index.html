@@ -50,6 +50,11 @@ section h2 { text-align:center; font-size:2.5rem; margin-bottom:40px; }
 .portfolio-item a:hover { background-color:#e64a19; }
 .portfolio-item:hover { transform:translateY(-5px); box-shadow:0 8px 25px rgba(0,0,0,0.15); }
 
+/* Contact Section */
+form input, form textarea { width:100%; padding:12px; margin:10px 0; border-radius:5px; border:1px solid #ddd; }
+form button { background-color:#ff5722; color:white; padding:12px 20px; border:none; border-radius:5px; cursor:pointer; }
+form button:hover { background-color:#e64a19; }
+
 /* Footer */
 footer { background:#333; color:#fff; padding:20px; text-align:center; }
 footer ul { display:flex; justify-content:center; list-style:none; padding:0; }
@@ -76,13 +81,12 @@ footer ul li a:hover { color:#ff5722; }
 </header>
 
 <section class="home" id="home">
-    <h3>Hello, It's Me</h3>
-    <img src="https://media.licdn.com/dms/image/v2/D5603AQHvuLXwmZwmuQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1731850159723?e=1760572800&v=beta&t=ZowA_B4TzEZlTkyTjuUpzm1YdKOG1TBD0tC1IUYRO5Q" 
-         alt="Aleti Shivasai">
-    <h1>Aleti Shivasai</h1>
-    <h3>Full Stack Developer</h3>
-    <p>I'm a Computer Science graduate and Full Stack Developer. My internship experience has strengthened my personal skills, and I am eager to learn and grow further in my career.</p>
-    <a href="#about" class="btn-box">More About Me</a>
+<h3>Hello, It's Me</h3>
+<img src="https://media.licdn.com/dms/image/v2/D5603AQHvuLXwmZwmuQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1731850159723?e=1760572800&v=beta&t=ZowA_B4TzEZlTkyTjuUpzm1YdKOG1TBD0tC1IUYRO5Q" alt="Aleti Shivasai">
+<h1>Aleti Shivasai</h1>
+<h3>And I'm a <span class="text"></span></h3>
+<p>I'm a Computer Science graduate and Full Stack Developer. My internship experience has strengthened my personal skills, and I am eager to learn and grow further in my career.</p>
+<a href="#about" class="btn-box">More About Me</a>
 </section>
 
 <section id="about">
@@ -150,6 +154,10 @@ footer ul li a:hover { color:#ff5722; }
 <li><a href="mailto:shivasaireddyaleti@gmail.com"><i class='bx bxl-gmail'></i></a></li>
 </ul>
 </footer>
+
+<!-- Typed.js -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="main.js"></script>
 
 </body>
 </html>
